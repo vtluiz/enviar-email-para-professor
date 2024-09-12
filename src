@@ -1,0 +1,57 @@
+importar pyautogui
+tempo de importação
+
+pyautogui.PAUSE = 1 # Pausa de 1 segundo entre cada comando
+
+# Alerta antes de iniciar
+pyautogui.alert('O código irá iniciar, não use o computador durante este período')
+
+# Abrir o Google Chrome
+pyautogui.press('winleft')
+pyautogui.write("google")
+pyautogui.press('enter')
+tempo.sono(1)
+pyautogui.moveTo(608, 424) # Ajuste a posição conforme necessário
+pyautogui.clique()
+time.sleep(5) # Espera para o Google abrir
+pyautogui.clique()
+
+# Abra uma nova janela e acesse o Gmail
+
+pyautogui.write('https://mail.google.com/mail/u/0/?ogbl#inbox')
+pyautogui.press('enter')
+time.sleep(5) # Espera para o Gmail carregar
+pyautogui.moveTo(805, 313)
+pyautogui.clique()
+
+# Escrever o destinatário
+pyautogui.clique()
+pyautogui.write("sua senha")
+pyautogui.sleep(2)
+pyautogui.moveTo(1083, 505)
+pyautogui.clique()
+
+pyautogui.moveTo(1254, 355)
+pyautogui.clique()
+pyautogui.sleep(3)
+pyautogui.moveTo(78, 178) # Ajuste conforme necessário
+pyautogui.click() # Foco no campo "Para"
+
+
+# Escrever o assunto
+pyautogui.moveTo (824, 346) # Ajuste conforme necessário
+pyautogui.click() # Foco no campo "Assunto"
+
+pyautogui.write('Olá professor')
+
+# Escrever o corpo do e-mail
+pyautogui.moveTo(910, 314) # Ajuste conforme necessário
+pyautogui.click() # Foco no corpo do e-mail
+pyautogui.write('email do professor')
+
+# Enviar e-mail
+pyautogui.moveTo(870, 830) # Posição do botão "Enviar"
+pyautogui.clique()
+
+# Aviso de término
+pyautogui.alert("O código já terminou de execução. Você já pode começar a mexer no seu computador normalmente :)")
